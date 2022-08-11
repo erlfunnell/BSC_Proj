@@ -1,0 +1,13 @@
+#Short list of commands used to merge, crop and convert all videos used for network training and analysis
+
+
+#Simply converting any .avi file to .mp4 so all videos are same format - see methods
+ffmpeg -i inputvideo.avi outputvideo.mp4
+
+
+#Create .txt file list of video clips to be merged + then concatenate - completed for 2 sessions per mouse
+ffmpeg -f concat -i videolist.txt -c copy outputvideo.mp4
+
+
+#Crop videos to all be same length for comparison between animals and groups - .txt file list input not available for this function
+ffmpeg -ss 00:00:00 -to 00:05:00 -i inputvideo.mp4 -c copy outputvideo.mp4
