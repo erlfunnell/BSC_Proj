@@ -1,7 +1,7 @@
 #Short list of commands used to merge, crop and convert all videos used for network training and analysis
 
 
-#Simply converting any .avi file to .mp4 so all videos are same format - see methods
+#Simply converting any .avi file to .mp4 so all videos are same format - see methods for rationale
 ffmpeg -i inputvideo.avi outputvideo.mp4
 
 
